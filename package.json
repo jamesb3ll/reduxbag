@@ -1,6 +1,6 @@
 {
   "name": "reduxbag",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Callbag middleware for Redux",
   "main": "index.js",
   "repository": "https://github.com/jamesb3ll/reduxbag",

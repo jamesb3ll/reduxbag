@@ -1,6 +1,6 @@
 # reduxbag
 
-[Callbag](https://github.com/callbag/callbag)-based middleware for [Redux](https://github.com/reactjs/redux)
+[Callbag](https://github.com/callbag/callbag)-based middleware for [Redux](https://github.com/reactjs/redux).
 
 - Tiny (>350b)
 - Zero dependencies
@@ -35,7 +35,7 @@ const todos = (state = [], action) => {
 
 const ajaxEpic = (action$, store) => pipe(
   action$,
-  ofType('AJAX_TODO'),
+  ofType('FETCH_TODO'),
   mapPromise(action =>
     fetch(`//jsonplaceholder.typicode.com/posts/${(1+Math.random()*50)>>>0}`)
     .then(res => res.json())
@@ -54,7 +54,7 @@ const store = createStore(
 console.log(store.getState());
 
 store.dispatch({ type: 'ADD_TODO', text: 'Try out callbags' });
-store.dispatch({ type: 'ASYNC_TODO' });
+store.dispatch({ type: 'FETCH_TODO' });
 
 store.subscribe(() => console.log(store.getState()));
 ```
