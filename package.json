@@ -1,0 +1,9 @@
+{
+  "name": "reduxbag",
+  "version": "0.1",
+  "description": "Callbag middleware for Redux",
+  "main": "index.js",
+  "repository": "https://github.com/jamesb3ll/reduxbag",
+  "author": "James Bell (jamesb3ll)",
+  "license": "MIT"
+}
