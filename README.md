@@ -2,7 +2,7 @@
 
 [Callbag](https://github.com/callbag/callbag)-based middleware for [Redux](https://github.com/reactjs/redux).
 
-- Tiny (>350b)
+- Tiny (<350b)
 - Zero dependencies
 - Similar API to redux-observable
 - “Unlimited” operators ([callbag ecosystem](https://github.com/callbag/callbag/wiki))
