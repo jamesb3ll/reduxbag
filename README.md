@@ -37,7 +37,7 @@ const ajaxEpic = (action$, store) => pipe(
   action$,
   ofType('FETCH_TODO'),
   mapPromise(action =>
-    fetch(`//jsonplaceholder.typicode.com/posts/${(1+Math.random()*50)>>>0}`)
+    fetch(`//jsonplaceholder.typicode.com/posts/${(1+Math.random()*50)>>0}`)
     .then(res => res.json())
   ),
   map(data => ({
@@ -51,10 +51,10 @@ const store = createStore(
   applyMiddleware(createReduxbagMiddleware(ajaxEpic)),
 );
 
-console.log(store.getState());
+const logState = () => console.log(store.getState());
+store.subscribe(logState);
+logState();
 
 store.dispatch({ type: 'ADD_TODO', text: 'Try out callbags' });
 store.dispatch({ type: 'FETCH_TODO' });
-
-store.subscribe(() => console.log(store.getState()));
 ```
